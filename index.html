@@ -28,6 +28,10 @@ Select ONE Additional
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
+
+
+
+
     <button id="mem1-button">Song #1</button>
     <button id="mem2-button">Song #2</button>
     <button id="mem3-button">Song #3</button>
@@ -35,12 +39,12 @@ Select ONE Additional
     <ol>
       <li>
         <h3 id="mem1">Song #1</h3>
-        <p>More about this memory.</p>
+        <iframe id="song1" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/6iJrkignemcwQ6JC212kUk?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </li>
 
       <li>
         <h3 id="mem2">Song #2</h3>
-        <p>More about this memory.</p>
+        <iframe id="song2" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/21IQFciuyfI3yP9fkub9N1?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </li>
 
       <li>
@@ -51,18 +55,21 @@ Select ONE Additional
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
-
+$("#song1").hide()
       // ======================== Button #1
       $("#mem1-button").click(function () {
         $("#mem1").css("color", "purple");
-        $("Body").css("background-color", "yellow");
-        $("a").attr("href","<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/6iJrkignemcwQ6JC212kUk?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>")
+        $("Body").css("background-color", "#6b5e59");
+       $("#song1").show(1600);
       });
 
+
+      $("#song2").hide()
       // ======================== Button #2
       $("#mem2-button").click(function () {
         $("#mem2").css("color", "blue");
         $("Body").css("background-color", "pink");
+        $("#song2").show(1600);
       });
 
       // ======================== Button #3
