@@ -35,7 +35,7 @@ Select ONE Additional
     <button id="mem1-button" class="buttons">Song #1</button>
     <button id="mem2-button" class="buttons">Song #2</button>
     <button id="mem3-button" class="buttons">Song #3</button>
-    <h1>My Top 3 Songs that I Listened <span>This Year</span></h1>
+    <h1 id="top3">My Top 3 Songs that I Listened <span>This Year</span></h1>
     <ol>
       <li>
         <h3 id="mem1">Song #1</h3>
@@ -57,19 +57,21 @@ Select ONE Additional
     <script>
 $("#song1").hide()
       // ======================== Button #1
-      $("#mem1-button").click(function () {
-        $("#mem1").css("color", "purple");
+        $("#mem1-button").click(function () {
+        $("#mem1").css("color", "#2b254f");
         $("Body").css("background-color", "#6b5e59");
        $("#song1").show(1600);
+       $("#top3").css("color","#292421");
       });
 
 
       $("#song2").hide()
       // ======================== Button #2
       $("#mem2-button").click(function () {
-        $("#mem2").css("color", "blue");
+        $("#mem2").css("color", "#bf221d");
         $("Body").css("background-color", "#8a322f");
         $("#song2").show(1600);
+        $("#top3").css("color","#d67f4d");
       });
 
       // ======================== Button #3
