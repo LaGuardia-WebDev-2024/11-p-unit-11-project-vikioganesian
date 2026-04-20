@@ -35,7 +35,7 @@ Select ONE Additional
     <button id="mem1-button" class="buttons">Song #1</button>
     <button id="mem2-button" class="buttons">Song #2</button>
     <button id="mem3-button" class="buttons">Song #3</button>
-    <h1 id="top3">My Top 3 Songs that I Listened <span>This Year</span></h1>
+    <h1 class="top3">My Top 3 Songs that I Listened <span>This Year</span></h1>
     <ol>
       <li>
         <h3 id="mem1">Song #1</h3>
@@ -49,35 +49,44 @@ Select ONE Additional
 
       <li>
         <h3 id="mem3">Song #3</h3>
-        <p>More about this memory</p>
+        <iframe id="song3" data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/5jgFvROeP9DlLl9dMHQEtw?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </li>
     </ol>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
+
+$("p").html()
+
+
 $("#song1").hide()
       // ======================== Button #1
         $("#mem1-button").click(function () {
-        $("#mem1").css("color", "#2b254f");
+     
         $("Body").css("background-color", "#6b5e59");
        $("#song1").show(1600);
-       $("#top3").css("color","#292421");
+       $(".top3").css("color","#292421");
       });
 
 
       $("#song2").hide()
       // ======================== Button #2
       $("#mem2-button").click(function () {
-        $("#mem2").css("color", "#bf221d");
+        
         $("Body").css("background-color", "#8a322f");
         $("#song2").show(1600);
-        $("#top3").css("color","#d67f4d");
+        $(".top3").css("color","#d67f4d");
       });
 
+
+      $("#song3").hide()
       // ======================== Button #3
       $("#mem3-button").click(function () {
-        $("#mem3").css("color","#c90859");
-        $("Body").css("background-color", "orange");
+        
+        $("Body").css("background-color", "#070e33");
+        $("#song3").show(1600);
+        $(".top3").css("color","#777487");
+
       });
 
 
